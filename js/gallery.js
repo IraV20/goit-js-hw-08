@@ -97,7 +97,7 @@ gallery.addEventListener("click", (e) => {
 });
 
 function modal(image) {
-  const modal = basicLightbox.create(
+  const instance = basicLightbox.create(
     `
     <img
           class="gallery-image"
@@ -115,11 +115,11 @@ function modal(image) {
     }
   );
 
-  modal.show();
+  instance.show();
 
   function onModalClose(event) {
     if (event.code === "Escape") {
-      modal.close();
+      instance.close();
     }
   }
 }
